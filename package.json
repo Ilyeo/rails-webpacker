@@ -10,6 +10,7 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "jest": "^22.1.4",
     "webpack-dev-server": "^2.11.1"
   }
 }
