@@ -1,6 +1,9 @@
 {
   "name": "rails-webpacker",
   "private": true,
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "@rails/webpacker": "^3.2.0",
     "babel-preset-react": "^6.24.1",
@@ -12,5 +15,14 @@
   "devDependencies": {
     "jest": "^22.1.4",
     "webpack-dev-server": "^2.11.1"
+  },
+  "jest": {
+    "roots": ["app/javascript/packs"],
+    "moduleFileExtensions": ["js", "jsx"],
+    "moduleDirectories": ["node_modules", "app/javascript"],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    }
   }
 }
